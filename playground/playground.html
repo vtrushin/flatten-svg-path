@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.button-group {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 5px 10px;
+
+            .button {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                gap: 5px;
+                input {
+                    margin: 0;
+                }
+            }
+		}
+	</style>
+</head>
+<body>
+
+<svg id="bezier" style="border: 1px solid #efefef" width="600" height="400">
+	<g id="handlers"></g>
+	<g id="group" style="pointer-events: none"></g>
+</svg>
+
+<p></p>
+
+<div class="button-group" id="curve-types">
+	<label class="button">
+		<input type="radio" name="curve-type" value="line" checked />
+		<span>Line</span>
+	</label>
+	<label class="button">
+		<input type="radio" name="curve-type" value="cubicBezier" />
+		<span>Cubic bezier</span>
+	</label>
+</div>
+
+<p></p>
+
+<div id="step-size">
+	<label style="display: flex; gap: 5px;">
+		<span>Max step size</span>
+		<input id="step-size-input" type="range" min="2" max="300" value="20" step="1" />
+		<output id="step-size-output" style="width: 30px"></output>
+	</label>
+</div>
+
+<script src="playground.js" type="module"></script>
+
+</body>
+</html>

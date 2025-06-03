@@ -1,0 +1,21 @@
+{
+  "name": "flatten-svg-path",
+  "version": "0.0.1",
+  "author": "Vlad Trushin",
+  "description": "Flatten SVG path",
+  "homepage": "https://github.com/vtrushin/flatten-svg-path",
+  "repository": "vtrushin/flatten-svg-path",
+  "maintainers": [
+    {
+      "name": "Vlad Trushin <monospectr@mail.ru> (https://github.com/vtrushin)",
+      "email": "monospectr@mail.ru",
+      "github-username": "vtrushin"
+    }
+  ],
+  "keywords": [
+    "flatten-svg",
+    "svg"
+  ],
+  "main": "flatten-svg-path.js",
+  "license": "MIT"
+}
