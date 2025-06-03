@@ -16,6 +16,8 @@
     "flatten-svg",
     "svg"
   ],
+  "type": "module",
   "main": "flatten-svg-path.js",
+  "types": "flatten-svg-path.d.ts",
   "license": "MIT"
 }
