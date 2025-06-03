@@ -13,13 +13,11 @@ const lineToCommand = point => ({ type: 'L', values: [point.x, point.y] })
 
 export const flattenSvgPath = (commands, maxStepSize) => {
     if (commands.length === 0) {
-        console.log(222)
-        return 1
+        return [null, { type: 'NO_COMMANDS', message: 'No commands provided' }]
     }
 
     if (commands[0].type !== 'M' && commands[0].type !== 'm') {
-        console.log(333)
-        return 1
+        return [null, { type: 'NO_FIRST_MOVE_TO', message: '"moveTo" should be first command' }]
     }
 
     let initPoint = { x: 0, y: 0 }
@@ -149,7 +147,7 @@ export const flattenSvgPath = (commands, maxStepSize) => {
             }
 
             default: {
-                return 1
+                return [null, { type: 'UNKNOWN_COMMAND', message: 'Unknown command' }]
             }
         }
 
@@ -164,5 +162,5 @@ export const flattenSvgPath = (commands, maxStepSize) => {
 
     resultPoints.push(lineToCommand(prevPoint))
 
-    return resultPoints
+    return [resultPoints, null]
 }
