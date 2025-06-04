@@ -11,7 +11,7 @@ const reflectControlPoint = (originPoint, controlPoint) => ({
 const moveToCommand = point => ({ type: 'M', values: [point.x, point.y] })
 const lineToCommand = point => ({ type: 'L', values: [point.x, point.y] })
 
-export const flattenSvgPath = (commands, maxStepSize) => {
+export const flattenSvgPath = (commands, { maxStepSize }) => {
     if (commands.length === 0) {
         return [null, { type: 'NO_COMMANDS', message: 'No commands provided' }]
     }

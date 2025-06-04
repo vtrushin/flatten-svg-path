@@ -500,7 +500,7 @@ const render = () => {
     const svgPathData = pathDataToSvgPathData(pathData)
 
     // console.time('render')
-    const segmentsPathData = flattenSvgPath(pathData, stepSize)
+    const [segmentsPathData, error] = flattenSvgPath(pathData, { maxStepSize: stepSize })
     // console.timeEnd('render')
 
     const points = getPointsFromSvgPathData(segmentsPathData)
