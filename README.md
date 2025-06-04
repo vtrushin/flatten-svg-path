@@ -16,5 +16,12 @@ const svgPath = [
 const [result, error] = flattenSvgPath(svgPath, { maxStepSize: 10 })
 
 console.log(result)
-// 
+// [
+//   { type: 'M', values: [112.54, 110.26] },
+//   { type: 'L', values: [112.54, 110.26] }
+//   { type: 'L', values: [115.87, 115.7] }
+//   { type: 'L', values: [107.94, 120.87] },
+//   { type: 'L', values: [98.28, 121.30] },
+//   ...
+// ]
 ```
